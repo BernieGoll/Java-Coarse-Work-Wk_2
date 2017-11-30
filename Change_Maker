@@ -1,1 +1,31 @@
+import java.util.Scanner;
+
+// program output lists least amount of coins to give change for user change input
+public class Week_One_changeMaker
+{
+	public static void main(String[] args)
+	{
+		Scanner input = new Scanner(System.in);
+		System.out.println("What change do you want back?\n");
+		int change = input.nextInt();
+		calculate(change);
+	}
+	
+	public static void calculate(int change)
+	{
+		 int q = change / 25;
+		 change = change % 25;
+		 int dimes = change/10;
+		 change = change % 10;
+		 int nickels = change/5;
+		 change = change % 5;
+		 int pennies = change/1;
+		 change = change % 1;	 
+		 
+		 System.out.println("Quarters: "+q+" Dimes: "+dimes);
+		 System.out.println("Nickels: "+nickels);
+		 System.out.println("Pennies: "+pennies);
+		 
+	}		
+}
 
